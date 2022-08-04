@@ -3,7 +3,7 @@
   --background-color: black;
   --base-color: #f1d27d;
   --secondary-color: #f7c873;
-  --action-color: #19ece1;
+  --action-color: rgb(248, 5, 65);/*#bc1c1c; */
   --layover-color: #d2e1f36c;
 }
 
@@ -12,7 +12,7 @@ nav{
   grid-area: header;
 	width: 100%;
 	height: 75px;
-	background-color: black;
+	/* background-color: black; */
 	line-height: 75px;
 	padding:0px 30px;
 	position:fixed;
@@ -44,7 +44,9 @@ nav ul li a{
 	padding:0px 32px;
 }
 nav ul li a:hover{
-	color:#c0d96f;
+	/* color:#c0d96f; */
+
+  color: rgb(255, 0, 38)
 }
 nav ul li .active{
 	color:#c0d96f;
@@ -66,12 +68,9 @@ body {
   grid-template-rows: 0.5fr 4fr 3fr 0.5fr;
   grid-template-areas:
     "header header header"
-  /* "main main header" */
     "main main finance"
     "timesheet insurance finance"
     "footer footer footer";
-
-    /* "footer footer wheels"; */
   height: 175vh;
   gap: 0.5em;
   margin: 1em;
@@ -109,26 +108,26 @@ main:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 60px;
-  opacity: 0.7;
+  font-size: 40px;
+  opacity: 0.9;
   cursor: pointer;
 }
 
 #timesheet {
   grid-area: timesheet;
-  background-color: var(--layover-color);
+  /* background-color: var(--layover-color); */
   background-image: url(../images/harley.jpg);
   background-blend-mode: lighten;
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 60px;
+  font-size: 40px;
 }
 
 #timesheet:hover {
   grid-area: timesheet;
-  background-color: var(--layover-color);
+  /* background-color: var(--layover-color); */
   background-image: url(../images/harley.jpg);
   background-blend-mode: lighten;
   color: var(--action-color);
@@ -136,7 +135,7 @@ main:hover {
   justify-content: center;
   align-items: center;
   font-size: 60px;
-  opacity: 0.7;
+  opacity: 0.9;
   cursor: pointer;
 }
 #insurance {
@@ -161,7 +160,7 @@ main:hover {
   justify-content: center;
   align-items: center;
   font-size: 60px;
-  opacity: 0.3;
+  opacity: 0.9;
   cursor: pointer;
 }
 ul {
@@ -186,7 +185,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 60px;
+  font-size: 40px;
 }
 
 .finance:hover {
@@ -194,13 +193,12 @@ a {
   /* background-color: var(--action-color); */
   background-image: url(../images/second.jpg);
   background-blend-mode: darken;
-  /* background-size: cover; */
   color: var(--action-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 60px;
-  opacity: 0.3;
+  font-size: 40px;
+  opacity: 0.9;
   cursor: pointer;
 }
 a {
@@ -235,13 +233,13 @@ strong {
   font-family: Arial, Helvetica, sans-serif;
 }
 footer-container {
-  background-color: #212329;
+  /* background-color: #212329; */
   padding: 4rem 0 4rem 0; 
 }
 .footer {
   width: 100%;
   height: 40vh;
-  background-color: #212329;
+  /* background-color: #212329; */
   color: #fff;
   display: flex;
   justify-content: center;
@@ -252,6 +250,7 @@ footer-container {
 display: flex; 
 flex-direction: column;
 margin-right: 4rem; 
+font-size: 18px;
 }
 .footer-heading h2 {
   margin-top: 4rem;
@@ -298,6 +297,49 @@ margin-right: 4rem;
   background-color: #337af1;
   transition: all 0.4s ease-out;
 }
+
+.fa-brands {
+  display: flex; 
+flex-direction: column;
+margin-right: 4rem; 
+}
+.follow li{
+  /* align-items: center; */
+  display: flex; 
+flex-direction: column;
+margin-right: 2rem;
+}
+
+.media {
+  list-style: none;
+  transition: transform 1s;
+  font-size: 18px;
+  flex-direction: column;
+    
+}
+.media li {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  display: flex; 
+  flex-direction: column;
+  margin-right: 4rem;
+}
+.media li:hover {
+  color: red;
+  transition: 0.3s ease-out;;
+}
+.footer-heading li {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+.footer-heading li:hover {
+  color: red;
+  transition: 0.3s ease-out;;
+}
+
+
 @media screen and (max-width:1150px) {
   .footer {
     height: 50vh;
